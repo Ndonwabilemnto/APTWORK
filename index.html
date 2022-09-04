@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ndonwabile mnto's portfolio</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="description" content="Web designer and front-end developer">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+   <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+	<link href="Content/Transition.css" rel="stylesheet" />
+	<link href="Content/nav bar.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	<!--<link href="Content/Links.css" rel="stylesheet" />-->
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <style>
+      /* general styles */
+
+body {
+  font-family: "Raleway", sans-serif !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  color: #ff6363;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+  color: #484848;
+}
+
+.section {
+  text-align: center;
+}
+
+.skillbar {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+
+/* Nav Screen */
+
+.nav-screen {
+  height: 100%;
+  z-index: 500;
+  position: fixed;
+  background-color: #000;
+  opacity: 1;
+  right: -285px; /* start off behind the scenes */
+  -webkit-font-smoothing: antialiased;
+  position: fixed;
+  width: 285px;
+}
+
+.nav-screen .active {
+  display: block;
+}
+
+/* nav header links */
+
+.nav-brand {
+  position: fixed;
+  left: 0;
+  z-index: 600;
+  padding: 10px;
+}
+
+
+
+.fa-bars {
+  display: none !important;
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.fa-times {
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  right: 0;
+  z-index: 600;
+  cursor: pointer;
+}
+
+.header-links {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+}
+
+.header-links li {
+  color: white;
+  display: inline;
+  float: right;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.header-links a {
+  color: #757575;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.header-links a:hover {
+  color: #ff6363 !important;
+}
+
+/* slide out nav menu styles */
+
+.nav-container {
+  padding-top: 10%;
+}
+
+.nav-links {
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links ul {
+  margin-top: 15%;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 2.5;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links a:hover {
+  color: #ff6363;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: #5f5f5f !important;
+}
+
+/* Expanding border effect */
+
+.header-links a::after {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  opacity: 0;
+  -webkit-transition: width 0.6s, opacity 0.8s;
+  -moz-transition: width 0.6s, opacity 0.8s;
+  transition: width 0.6s, opacity 0.8s;
+}
+
+.header-links a:hover::after,
+.header-links a:focus::after {
+  opacity: 1;
+  width: 100%;
+}
+
+/* main header section */
+
+.opaque-bg {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  padding: 1px 1px 5px 5px;
+}
+
+
+
+.aboutme p {
+  color: white;
+  font-weight: 100;
+  font-size: 17.4px;
+}
+
+
+
+
+
+
+/* Scroll down indicator (bouncing) */
+
+/* Skill bars */
+
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: black;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #f00e0e;}
+.css {width: 80%; background-color: #2196F3;}
+.cshp {width: 65%; background-color: #1708e9;}
+.java {width: 65%; background-color: #f44336;}
+.vb {width: 70%; background-color: #caf50b;}
+.sql {width: 70%; background-color: #5a0ceb;}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.content-slide {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+/* footer styles */
+
+.footer {
+  background-color: #484848;
+  height: 100px;
+  padding-top: 10px;
+  position:relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.social-links a {
+  color: white;
+  padding: 0px 5px 0px 5px;
+}
+
+.social-links a:hover {
+  color: #ff6363;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* smaller resolution styles */
+
+@media (min-width: 100px) and (max-width: 500px) {
+  .fa-bars {
+    display: block !important;
+  }
+
+  .header-links {
+    display: none;
+  }
+}
+
+/* mobile styles */
+
+@media (min-width: 100px) and (max-width: 400px) {
+  .content {
+    max-width: 300px;
+  }
+
+  .aboutme h1 {
+    font-size: 28px;
+  }
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;  
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+  background-color: red;
+  color: black;
+}
+
+.navbar a.active {
+  color: white;
+}
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+.mynavbar {
+  overflow: hidden;
+  background-color: #333;  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.mynavbar a {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.opaque-bg {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  padding: 1px 1px 5px 5px;
+}
+
+.aboutme {
+background: url("https://s3-us-west-2.amazonaws.com/files.bradengelhardt.com/brad-bg-main.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.aboutme p {
+  color: white;
+  font-weight: 100;
+  font-size: 17.4px;
+}
+
+/* bouncing arrow */
+
+.fa-chevron-down {
+  color: #ff6363 !important;
+  bottom: 10px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 1.2s ease;
+}
+
+/* Scroll down indicator (bouncing) */
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+/* about section */
+
+/* Skill bars */
+
+.container-skillbar {
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 2%;
+  padding-left: 2%;
+  height: auto;
+  overflow: none;
+}
+
+/* input field styles */
+
+.contact-form {
+  padding: 0px 15px 0px 15px;
+}
+
+.form-control {
+  border: 2px solid rgba(0, 0, 0, 0.27);
+  width: 100%;
+  max-width: 100%;
+  height: 3em;
+  font-size: 16px;
+  padding: 1em;
+  margin: 0.5em 0 2em 0;
+  font-weight: bold;
+}
+
+textarea {
+  min-height: 10em;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#submit {
+  outline: none;
+  padding: 12px;
+  min-width: 200px;
+  border-radius: 2px;
+  border: 2px solid #ff6363;
+  text-align: center;
+  font-size: 1em;
+  color: #ff6363;
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#submit:hover {
+  background-color: #ff6363;
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr {
+  background-color: #dddddd;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the leftt */
+.prev {
+  position: absolute;
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #161212;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: rgb(223, 24, 24);}
+
+.cshp {width: 90%; background-color: #04AA6D;}
+
+    </style>
+</head>
+
+
+<body style="background-color:Black;">
+  <!-- navbar header -->
+  
+  <div class="Container">
+    <div class="navbar" id="myNavbar">
+      <a href="index.html"  class="active" style="font-family:'Century Gothic'; font-size:large; color:grey;">Home</a>
+      <a href="#About" style="font-family:'Century Gothic'; font-size:large; color:grey;">About</a>
+      <a href="#Education" style="font-family:'Century Gothic'; font-size:large; color:grey;">Education</a>
+      <a href="#Testimonials" style="font-family:'Century Gothic'; font-size:large; color:grey;">Testimonials</a>
+      <a href="#Projects" style="font-family:'Century Gothic'; font-size:large; color:grey;">Projects</a>
+      <a href="#Contact" style="font-family:'Century Gothic'; font-size:large; color:grey;">Contact</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    </div>
+  <!-- end navbar slider -->
+
+  <!-- begin fullpage -->
+
+  <div id="fullpage">
+
+    <!-- begin section -->
+    <div id="Text-Container" class="container">
+      <div class="row">
+        
+    <div class="section aboutme" data-anchor="aboutme">
+      <div class="opaque-bg animated fadeInDown">
+        <h1 style="color:rgb(189, 183, 189)">OTTO<span style="color:#FF6363">/</span>MNTO</h1>
+        <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+      </div>
+      <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="skills">
+      <div class="content" id="About">
+        <h1 class="wow fadeInDown" data-wow-delay="0.2s" >ABOUT ME</h1>
+        <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Ndonwabile Otto Mnto! I'm a South African based Web Designer, Back-end & Front-end Developer focused on creating clean, responsive web designs and applications!</p>
+
+        <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
+          <h1 class="wow fadeInDown" data-wow-delay="0.2s" id="About">MY SKILLS</h1>
+          <div class="skillbar clearfix " data-percent="90%">
+            <div style="color: grey;"><span>HTML5</span></div>
+            <div class="skill html">90%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="80%">
+            <div style="color: grey;"><span>CSS</span></div>
+            <div class="skill css">80%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="65%">
+            <div style="color: grey;"><span>C#</span></div>
+            <div class="skill cshp">65%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="60%">
+            <div style="color: grey;"><span>JAVA</span></div>
+            <div class="skill java">60%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="70%">
+            <div style="color: grey;"><span>VB.NET</span></div>
+            <div class="skill vb">70%</div>
+          </div> <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix " data-percent="70%">
+            <div style="color: grey;"><span>SQL</span></div>
+            <div class="skill sql">70%</div>
+          </div> <!-- End Skill Bar -->
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section" data-anchor="projects">
+      <div class="content-slide">
+        <div class="slide" id="Education">
+          <h1 class="wow fadeInDown" data-wow-delay="0.2s">Education</h1>
+         <!--- <p class="wow fadeInDown" data-wow-delay="0.2s">Digital streaming service</p>---->
+          <!---<h2>HTML Table</h2>--->
+
+<table>
+  <tr>
+    <th>Institution</th>
+    <th>Qualification</th>
+    <th>Year Obtained</th>
+   
+  </tr>
+  <tr>
+   <td>St John's College</td>
+     <td>Grade 12</td>
+      <td>2015</td>
+    
+  </tr>
+  <tr>
+  <td>Walter Sisulu University</td>
+    <td>NDip in Information Technology in Software Development</td>
+    <td>2021</td>
+  </tr>
+  <tr>
+  <td>Walter Sisulu University</td>
+   <td>Advanced Diploma in Applications Development</td>
+    <td>2022</td>
+  </tr>
+  
+</table>
+          <img class="wow fadeInUp" data-wow-delay="0.2s" data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/xfaire.jpg">
+        </div>
+        
+        <div class="slide" id="Testimonials">
+          <h1>Testimonials </h1>
+
+          <div class="slideshow-container">
+
+            <div class="mySlides">
+              <q>You have shown me that the saying "each one teach one" works.</q>
+              <p class="author">- Nomvuyiso Banya</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>Talent wins games, but teamwork and intelligence win championships.</q>
+              <p class="author">- Clarence Maxakato</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>It is literally true that you can succeed best and quickest by helping others to succeed.</q>
+              <p class="author">- Busisiwe Cele</p>
+            </div>
+
+            <div class="mySlides">
+              <q>If you want to lift yourself up, lift up someone else.</q>
+              <p class="author">- Mr Manko (Lecturer)</p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+           
+            
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/machete.jpg">
+        </div>
+      </div>
+        <!--<div class="slide">
+          <h1 id="Contact"> Contact</h1>
+          <p>Mockup of a personal portfolio I was working on for a friend.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/cascioportfolio.jpg">
+        </div>
+        <div class="slide">
+          <h1>THATONEBLOG</h1>
+          <p>Minimalist blogging platform.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/blog.jpg">
+        </div>
+        <div class="slide">
+          <h1>PIXBORED</h1>
+          <p>Website for sharing images and gifs.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/pixbored.jpg">
+        </div>--->
+        <div class="slide" id="Projects">
+          <h1>MY PROJECTS</h1>
+          <p>Responsive website for a small bussiness.</p>
+          <img data-src="https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/personalsite.jpg">
+
+          <center>
+
+            <p><a href="https://tmlimise.netlify.app/">Visit tmlimise.netlify.app!</a></p>
+          <img src="Capture.PNG" class="img-responsive img-rounded"  width=70%  >
+        </center>
+          
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+    
+    <div class="section" data-anchor="contact">
+      <div class="content wow fadeInDown" data-wow-delay="0.2s">
+        <h1 id="Contact">CONTACT ME</h1>
+        <p>Whether you're interested in working with me or just want to say hello, I'd love to hear from you!</p>
+
+        <span class="glyphicon glyphicon-earphone"> <h4 style="font-family:arial;"> <b><i>079 301 4386 </i></b> </h4> </span> <br/>
+        <br/>
+        
+        <span class="glyphicon glyphicon-envelope"> <h4 style="font-family:arial;"> <b><i>ndonwabilemnto@gmail.com</i></b> </h4> </span> <br/>
+
+        
+            
+        <div class="contact-form">
+
+          <div id="form-messages"></div>
+          <form id="ajax-contact" method="post" role="form" action="https//formsubmit.co/ndonwabilemnto@gmail.com" data-toggle="validator">
+            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+              <input type="text" class="form-control" id="name" name="name" placeholder="NAME" data-error="Field can't be blank!" required>
+              <input type="hidden" name="_subject" value="portfolio contact-form!">
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+              <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL" data-error="Field can't be blank!" required>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+              <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="hidden">
+              <input type="text" class="form-control" id="human" name="human" placeholder="">
+            </div>
+            <div class="wow fadeInUp" data-wow-delay="1s">
+              <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
+            </div>
+          </form>
+          <br>
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- begin section -->
+
+    <div class="section fp-auto-height">
+      <div class="footer">
+        <p>CONNECT WITH ME</p>
+        <div class="social-links">
+          <span><a href="https://www.linkedin.com/in/ndonwabile otto mnto" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></span>
+          <span><a target="_blank" href="https://twitter.com/mnto_otto" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></span>
+          <span><a href="https://github.com/ndonwabilemnto" target="_blank"><i class="fa fa-github fa-2x"></i></a></span>
+          <span><a href="https://codepen.io/Ottomatic-"><i class="fa fa-codepen fa-2x"></i></a></span>
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+  </div>
+  <!-- end fullpage -->
+
+  <script>
+    $(document).ready(function () {
+  // typing animation
+  (function ($) {
+    $.fn.writeText = function (content) {
+      var contentArray = content.split(""),
+        current = 0,
+        elem = this;
+      setInterval(function () {
+        if (current < contentArray.length) {
+          elem.text(elem.text() + contentArray[current++]);
+        }
+      }, 80);
+    };
+  })(jQuery);
+
+  // input text for typing animation
+  $("#holder").writeText("WEB DESIGNER + BACK-END + FRONT-END DEVELOPER");
+
+  // initialize wow.js
+  new WOW().init();
+
+  // Push the body and the nav over by 285px over
+  var main = function () {
+    $(".fa-bars").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "0px"
+        },
+        200
+      );
+
+      $("body").animate(
+        {
+          right: "285px"
+        },
+        200
+      );
+    });
+
+    // Then push them back */
+    $(".fa-times").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "-285px"
+        },
+        200
+      );
+
+      $("body").animate(
+        {
+          right: "0px"
+        },
+        200
+      );
+    });
+
+    $(".nav-links a").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "-285px"
+        },
+        500
+      );
+
+      $("body").animate(
+        {
+          right: "0px"
+        },
+        500
+      );
+    });
+  };
+
+  $(document).ready(main);
+
+  // initiate full page scroll
+
+  $("#fullpage").fullpage({
+    scrollBar: true,
+    responsiveWidth: 400,
+    navigation: true,
+    navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
+    anchors: ["home", "about", "portfolio", "contact", "connect"],
+    menu: "#myMenu",
+    fitToSection: false,
+
+    afterLoad: function (anchorLink, index) {
+      var loadedSection = $(this);
+
+      //using index
+      if (index == 1) {
+        /* add opacity to arrow */
+        $(".fa-chevron-down").each(function () {
+          $(this).css("opacity", "1");
+        });
+        $(".header-links a").each(function () {
+          $(this).css("color", "white");
+        });
+        $(".header-links").css("background-color", "transparent");
+      } else if (index != 1) {
+        $(".header-links a").each(function () {
+          $(this).css("color", "black");
+        });
+        $(".header-links").css("background-color", "white");
+      }
+
+      //using index
+      if (index == 2) {
+        /* animate skill bars */
+        $(".skillbar").each(function () {
+          $(this)
+            .find(".skillbar-bar")
+            .animate(
+              {
+                width: $(this).attr("data-percent")
+              },
+              2500
+            );
+        });
+      }
+    }
+  });
+
+  // move section down one
+  $(document).on("click", "#moveDown", function () {
+    $.fn.fullpage.moveSectionDown();
+  });
+
+  // fullpage.js link navigation
+  $(document).on("click", "#skills", function () {
+    $.fn.fullpage.moveTo(2);
+  });
+
+  $(document).on("click", "#projects", function () {
+    $.fn.fullpage.moveTo(3);
+  });
+
+  $(document).on("click", "#contact", function () {
+    $.fn.fullpage.moveTo(4);
+  });
+
+  // smooth scrolling
+  $(function () {
+    $("a[href*=#]:not([href=#])").click(function () {
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+          $("html,body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            700
+          );
+          return false;
+        }
+      }
+    });
+  });
+
+  //ajax form
+  $(function () {
+    // Get the form.
+    var form = $("#ajax-contact");
+
+    // Get the messages div.
+    var formMessages = $("#form-messages");
+
+    // Set up an event listener for the contact form.
+    $(form).submit(function (e) {
+      // Stop the browser from submitting the form.
+      e.preventDefault();
+
+      // Serialize the form data.
+      var formData = $(form).serialize();
+
+      // Submit the form using AJAX.
+      $.ajax({
+        type: "POST",
+        url: $(form).attr("action"),
+        data: formData
+      })
+        .done(function (response) {
+          // Make sure that the formMessages div has the 'success' class.
+          $(formMessages).removeClass("error");
+          $(formMessages).addClass("success");
+
+          // Set the message text.
+          $(formMessages).text(response);
+
+          // Clear the form.
+          $("#name").val("");
+          $("#email").val("");
+          $("#message").val("");
+        })
+        .fail(function (data) {
+          // Make sure that the formMessages div has the 'error' class.
+          $(formMessages).removeClass("success");
+          $(formMessages).addClass("error");
+
+          // Set the message text.
+          if (data.responseText !== "") {
+            $(formMessages).text(data.responseText);
+          } else {
+            $(formMessages).text(
+              "Oops! An error occured and your message could not be sent."
+            );
+          }
+        });
+    });
+  });
+});
+
+function myFunction() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+  </script>
+</body>
+</html>
